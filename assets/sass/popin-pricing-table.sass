@@ -1,0 +1,249 @@
+$pricing-plan-active-transform: scale(1)
+$pricing-item-border: 2px solid $mono-gray-2
+
+.plan-toggle-container
+  display: inline-block
+  border: 1px solid $mono-gray-2
+  border-radius: 10px
+  padding: 0
+  .plan-toggle
+    display: inline-block
+    padding: 4px 12px
+    color: #a4a4a5
+    font-size: .95rem
+
+    &.is-active
+      background: #e7edf3
+      border-radius: 10px
+      color: #6d6d6d
+      font-weight: bold
+      transition: background .15s ease-in-out
+    &:first-child
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px
+    &:last-child
+      border-top-right-radius: 10px
+      border-bottom-right-radius: 10px
+
+.pricing-table
+  background: #ffffff
+  &.is-comparative
+    .pricing-plan
+      position: relative
+      border: $pricing-item-border
+      &:last-of-type
+        border-right: 2px solid initial
+      &:not(.is-active),
+      &:not(.is-features)
+        z-index: 0
+
+      &.is-features
+        border-top: 2px solid #fff
+        border-bottom: 2px solid #fff
+        width: auto
+        min-width: min-content
+        max-width: max-content
+        z-index: 2
+        &:hover
+          transform: none
+          border-left: none
+          border-right: none
+          border-top: 1px solid #ffffff
+          border-bottom: 1px solid #ffffff
+          box-shadow: none
+        .plan-items
+          .plan-item
+            text-align: left !important
+            background-color: $mono-gray-2
+            color: $mono-gray-5
+            &.last-item,
+            &:last-of-type
+              border-bottom-color: transparent !important
+        .plan-footer
+          &:last-child
+            background-color: $mono-gray-2
+            border-bottom: 1px solid $mono-gray-3
+            border-radius: 0 !important
+      &.is-active
+        transform: none !important
+        box-shadow: none !important
+        border-left-width: 2px !important
+        border-right-width: 2px !important
+        margin-top: -30px
+        padding-top: 30px
+        &:hover
+          transform: $pricing-plan-active-transform !important
+          border-color: $accent-teal-af
+        border-width: 2px
+        z-index: 1
+        &.is-accent-teal-af
+          border-radius: 0
+          border-color: $accent-teal-af
+        +touch
+          margin: 0
+        
+
+  .pricing-plan
+    border: 1px solid $mono-gray-1
+    background: #ffffff
+    border-radius: 0
+    &:last-of-type
+      border-radius: 0 !important
+      border-left: 0
+      &:hover
+        border-left: 2px
+    &.is-features
+      border: transparent
+      .plan-items
+        background: $mono-gray-2
+        border-bottom: 1px solid $mono-gray-4
+        border-left: 1px solid $mono-gray-4
+        .plan-item
+          &.last-item
+            border: 0
+      .plan-footer
+        &:last-child
+          border-color: transparent !important
+
+    .plan-header,
+    .plan-footer,
+    .plan-price
+      background: #ffffff
+      padding: 0
+      // Plan Header
+      &:first-child
+        padding-top: 20px
+      // Select Button  
+      &:nth-child(3)
+        padding-bottom: 20px
+      .special
+        margin: 12px 0
+    .plan-header
+      color: $mono-gray-4
+      text-transform: uppercase
+    .plan-footer
+      margin-top: 0
+      .button
+        padding-left: 1rem
+        padding-right: 1rem
+    .plan-items
+      border-top: 1px solid $mono-gray-4
+      padding-bottom: 20px !important
+      &.is-features
+        border-color: transparent
+    .plan-item
+      padding-top: .25em
+      padding-bottom: .25em
+      height: 30px
+      background: #ffffff
+      border-bottom: 1px solid $mono-gray-3
+      &:last-of-type
+        border-bottom: 0 !important
+      .material-icons
+        &.checked
+          font-size: 20px !important
+          color: $accent-teal-af
+          display: inline-block
+      .plan-title-info
+        display:inline
+        position:relative
+
+        .plan-icon-info
+          display: inline-block
+          position: relative 
+          color: $mono-gray-3
+          font-size: 16px
+          line-height: 16px
+          cursor: help
+          white-space: unset
+          font-weight: bold
+            
+          .plan-info
+            display: none
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif
+            position: absolute
+            left: 30px
+            background: rgba(0,0,0,0.85)
+            color: #fff
+            width: auto
+            min-width: 200px
+            height: auto
+            padding: 6px 14px
+            top: 50%
+            transform: translateY(-50%)
+            font-size: 12px
+            line-height: 14px
+            z-index: 2
+            
+          &:hover
+            .plan-info
+              display: inline-block
+              transition: opacity .25s ease-in-out
+            
+              &:before
+                content: ''
+                display: inline-block
+                position: absolute
+                left: -10px
+                top: 50%
+                transform: translateY(-50%)
+                width: 0 
+                height: 0
+                border-top: 10px solid transparent
+                border-bottom: 10px solid transparent            
+                border-right: 10px solid rgba(0,0,0,0.85) 
+
+
+    .plan-price
+      .plan-price-amount
+        color: $mono-gray-6 !important
+        .plan-price-currency
+          vertical-align: baseline !important
+          font-size: 2.5rem !important
+
++touch
+  .section
+    padding: 0
+  .pricing-table
+    flex-flow: column wrap
+    .pricing-plan
+      .plan-header,
+      .plan-price,
+      .plan-footer
+        background: $mono-gray-1
+      width: 100%
+      min-width: 200px
+      max-width: max-content
+      margin-left: auto !important
+      margin-right: auto !important
+    
+      &:not(:first-child)
+        margin-top: 30px 
+      &:not(:last-child)
+        margin-bottom: 30px
+      &:not(.is-active)
+        border-left: 2px solid $mono-gray-2 !important
+        border-right: 2px solid $mono-gray-2 !important
+        border-width: 4px !important
+      &.is-active
+        padding-top: 0 !important
+      &.is-features
+          display: none
+      .plan-items
+        // border-left: 1px solid $mono-gray-2 !important
+        .plan-item
+          border-color: transparent
+          &:before
+            content: '';
+      
+      
+
+.plan-toggle
+  cursor: pointer
+
+
+
+.new
+  color: $popin-orange-af
+  font-weight: bold
+  text-transform: uppercase

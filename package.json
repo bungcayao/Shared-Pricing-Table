@@ -1,0 +1,46 @@
+{
+  "name": "Universal-Pricing-Table",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "description": "Universal Pricing Table for all",
+  "main": "index.htm",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:POPInNow/POPin-Pricing.git"
+  },
+  "author": "Joshua Bungcayao",
+  "scripts": {
+    "start": "webpack --watch --config webpack.config.js",
+    "clean": "webpack --progress --hide-modules --plugin clean-webpack-plugin --config webpack.config.js",
+    "build": "webpack --progress --hide-modules --plugin clean-webpack-plugin --config webpack.config.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "~6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-minify-loader": "^1.4.0",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^2.0.8",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^3.8.1",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "bulma-pricingtable": "latest",
+    "glob-all": "^3.1.0",
+    "html-minifier": "^3.5.21",
+    "node-sass": "^4.11.0",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0"
+  }
+}
