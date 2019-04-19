@@ -15,6 +15,6 @@ Notables
 - The js passes parameters to external links based off of user's origin.
 - In return we're able to capture analytics through Google Tag Manager, Google Ad Campaigns, and HubSpot.
 
-## HTML, CSS, and JS in Action
-
+HTML, CSS, and JS in Action
+--
 https://www.popin.live/pricing/
