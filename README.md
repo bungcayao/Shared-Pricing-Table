@@ -17,4 +17,4 @@ Notables
 
 HTML, CSS, and JS in Action
 --
-https://www.popin.live/pricing/
+https://www.popin.rocks/pricing/
