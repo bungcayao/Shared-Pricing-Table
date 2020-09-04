@@ -39,7 +39,7 @@
     "bulma-pricingtable": "latest",
     "glob-all": "^3.1.0",
     "html-minifier": "^3.5.21",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0"
   }
